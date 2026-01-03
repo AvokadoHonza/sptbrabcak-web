@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrvniController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [PrvniController::class, 'index']);
 
 Route::get('/test', function () {
     return view('test');
